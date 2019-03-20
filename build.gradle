@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id "edu.wpi.first.GradleRIO" version "2019.4.1"
+}
+
+group 'com.first1444.frc.util'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compile wpi.deps.wpilib()
+    compile wpi.deps.vendor.java()
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    compile 'com.github.retrodaredevil:abstract-controller-lib:v1.4.5'
+}
+wrapper {
+    gradleVersion = '5.0'
+}
